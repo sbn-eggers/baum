@@ -67,7 +67,10 @@ if __name__ == "__main__":
 
     codewort = input("Codewort: ")
 
-    if codewort == "flag{g4nz_v13l_14m3tt4}":
+    with open("flag.txt", "r") as flag_file:
+        flag = flag_file.readline().strip()
+
+    if codewort == flag:
         print(baum_geschmueckt)
         print("Na, jetzt kann Weihnachten ja kommen!")
     else:
